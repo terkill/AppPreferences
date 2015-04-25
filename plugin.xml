@@ -8,10 +8,10 @@
   </engines>
   <name>Preferences Access Plugin</name>
 
+  <js-module src="src/android/applicationPreferences.js" name="applicationPreferences">
+    <clobbers target="appgiraffe.plugins.applicationPreferences" />
+  </js-module>
   <platform name="android">
- 	<js-module src="src/android/applicationPreferences.js" name="applicationPreferences">
-              <clobbers target="applicationPreferences" />
-        </js-module>
 	  <source-file src="src/android/AppPreferences.java" target-dir="src/com/simonmacdonald/prefs/" />
 
 	  <config-file target="res/xml/config.xml" parent="/widget">
@@ -21,10 +21,6 @@
           </config-file>
   </platform>
     <platform name="ios">
- 	<js-module src="src/ios/applicationPreferences.js" name="applicationPreferences">
-              <clobbers target="applicationPreferences" />
-        </js-module>
-		
         <config-file target="config.xml" parent="plugins">
 		<plugin name="applicationPreferences" value="applicationPreferences" />
         </config-file>
